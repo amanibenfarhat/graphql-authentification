@@ -1,0 +1,25 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+input CreateUserDTO {
+  username: String!
+  password: String!
+  roles: String
+}
+
+type GetUserDTO {
+  _id: ID
+  username: String
+  password: String
+  roles: String
+}
+
+type Mutation {
+  addUser(createUserDTO: CreateUserDTO!): String!
+  Login(createUserDTO: CreateUserDTO!): String!
+}
+
+type Query {
+  getUsers: [GetUserDTO!]!
+}
